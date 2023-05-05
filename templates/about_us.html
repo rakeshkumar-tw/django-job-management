@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    {% load staticfiles %}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+img {
+  opacity: 0.9;
+  max-width: 530px;
+  border-radius: 50%;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33%;
+  margin-bottom: 16px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  
+  
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: ;
+  color: black;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h3>We are a startup company. we’re flexible, agile, and committed to your success.Think of us as an extension of your team, using experience to create results<br>
+    that everyone is insanely proud of.</h3>
+    <p> We understand the requirements of the client and know what solutions can fit their needs. To do so, we make sure to do our deep research and <br >
+         analyses on the product, user persona, and competitors to identify the market requirements. As a leading mobile app development company, we work to <br>
+         establish long-lasting and strong relationships with our clients.
+    </h3>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+    
+      <img height="400" src="{% static 'img/dp.jpg' %}" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Rakesh Kumar</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Rakesh started his career as a sales and inventory analyst after completing a Bachelor of Engineering with Honours at Macquarie University. He then moved into helping small businesses with technology, software and web development. </p>
+        <p>rakeshkumar.tw@gmail.com</p>
+        <p><button class="button" onclick="location.href='https://www.linkedin.com/in/rakesh-kumar-9a6595216/'">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img height="400" src="{% static 'img/Untitled.png' %}" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Malik Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Malik entered the workforce as a heavy vehicle diesel mechanic. He worked his way through every level of management as a fleet manager specialising in asset maintenance, eventually moving into overseeing large.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img height="400" src="{% static 'img/avatar.png' %}" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Joseph</h2>
+        <p class="title">Art Director</p>
+        <p>Malik entered the workforce as a heavy vehicle diesel mechanic. He worked his way through every level of management as a fleet manager specialising in asset maintenance, eventually moving into overseeing teams.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+{% endblock %}
